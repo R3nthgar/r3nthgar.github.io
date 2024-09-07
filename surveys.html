@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
   <head>
     <title>Sheets API Quickstart</title>
@@ -28,7 +28,7 @@
 
       // Authorization scopes required by the API; multiple scopes can be
       // included, separated by spaces.
-      const SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly';
+      const SCOPES = 'https://www.googleapis.com/auth/drive.file';
 
       let tokenClient;
       let gapiInited = false;
@@ -139,6 +139,7 @@
           document.getElementById('content').innerText = 'No values found.';
           return;
         }
+        console.log(range.values)
         // Flatten to string to display
         const output = range.values.reduce(
             (str, row) => `${str}${row[0]}, ${row[4]}\n`,
