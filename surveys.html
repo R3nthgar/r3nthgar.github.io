@@ -147,6 +147,7 @@
         document.getElementById('content').innerText = output;
       }
       async function createSheet() {
+        console.log(gapi.client.sheets.spreadsheets)
         let response;
         try {
           // Fetch first 10 files
