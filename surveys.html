@@ -149,7 +149,8 @@
           response = await gapi.client.sheets.spreadsheets.values.append({
             spreadsheetId: id,
             range: 'Sheet1',
-            values: [1,2,3]
+            values: ["1","2","3"],
+            valueInputOption: "USER_ENTERED"
           });
         } catch (err) {
           console.log(err)
