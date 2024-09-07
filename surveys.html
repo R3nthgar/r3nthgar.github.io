@@ -152,17 +152,11 @@
             values: [1,2,3]
           });
         } catch (err) {
+          console.log(err)
           document.getElementById('content').innerText = err.message;
           return;
         }
-        const range = response.result;
-        console.log(range)
-        if (!range || !range.values || range.values.length == 0) {
-          document.getElementById('content').innerText = 'No values found.';
-          return;
-        }
-        console.log(range.values)
-        document.getElementById('content').innerText = range.values;
+        console.log(response)
       }
       async function createSheet() {
         console.log(gapi.client.sheets.spreadsheets)
