@@ -53,7 +53,6 @@
           apiKey: API_KEY,
           discoveryDocs: [DISCOVERY_DOC],
         });
-        console.log("2")
         gapiInited = true;
         maybeEnableButtons();
       }
@@ -68,7 +67,6 @@
           callback: '', // defined later
         });
         gisInited = true;
-        console.log("1")
         maybeEnableButtons();
       }
 
@@ -91,7 +89,7 @@
           }
           document.getElementById('signout_button').style.visibility = 'visible';
           document.getElementById('authorize_button').innerText = 'Refresh';
-          await getData("1pfSxVMcp6yjZpfd4tsPSXhp3KC_lJjLGlrdOMjpB4Ak");
+          await appendSheet("1pfSxVMcp6yjZpfd4tsPSXhp3KC_lJjLGlrdOMjpB4Ak");
         };
 
         if (gapi.client.getToken() === null) {
